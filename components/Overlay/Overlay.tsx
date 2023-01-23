@@ -3,7 +3,7 @@ import cardData from "@/Data/cardData.json";
 import { useState } from "react";
 import Card from "../UI/Card";
 
-const Overlay = () => {
+const Overlay = (props:any) => {
   const [displayList, setDisplayList] = useState<any>([]);
 
   const [imgArray, setImgArray] = useState<any>([]);
@@ -14,13 +14,12 @@ const Overlay = () => {
     const { data } = cardData;
     const filterValue = JSON.parse(val).value;
 
-    if (filterValue == "rooms" ) {
-      const displayList = data.filter((elem) => elem.type === filterValue);
-      setDisplayList(displayList);
-    } else if(filterValue == "suits"){
-      const displayList = data.filter((elem) => elem.type === filterValue);
+    
 
+    if (filterValue == "rooms" || filterValue == "suits" ) {
+      const displayList = data.filter((elem) => elem.type === filterValue);
       setDisplayList(displayList);
+      setImgArray([]);
     }else {
       setDisplayList([]);
     }
@@ -35,14 +34,18 @@ const Overlay = () => {
     }
   };
 
+
+
   return (
     <div className="container" style={{ border: "1px solid black" }}>
       <NavBar onChange={displayHandler}
-      addImage = {imgArray} />
+      submitHandler={()=>props.showImgs(imgArray)}
+      />
 
       <div className="row">
-        {displayList.map((elem: any, idx: any) => {
-          return <Card key={idx} imgUrl={elem.name} onClick={clickhandler} />;
+       
+        {displayList.map((elem: any) => {
+          return <Card key={elem.id} imgUrl={elem.name} id={elem.id} onClick={clickhandler} />;
         })}
       </div>
     </div>

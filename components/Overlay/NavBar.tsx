@@ -4,9 +4,7 @@ import Button from "../UI/Button";
 const NavBar = (props:any) => {
   const options = [{ label: "Rooms", value: "rooms" }, {label:"Suits",value:"suits"}];
 
-  const submitHandler = (e:any) => {
-    console.log("Jai Shree Ram Button Submit Handler",props.addImage);
-  };
+
 
   const selectChangeHandler = (selectVal:any)=>{
     // console.log("jai Shree Ram from select Change handler",selectVal);
@@ -30,7 +28,7 @@ const NavBar = (props:any) => {
             </div>
 
             <div className="col-6">
-              <Button onClick={submitHandler} />
+              <Button onClick={props.submitHandler} />
             </div>
           </div>
         </div>
