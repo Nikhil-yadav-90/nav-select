@@ -1,0 +1,30 @@
+{
+    "data":[
+        {
+            "id":1,
+            "name":"beautiful-blonde-woman-relaxing-with-a-can-of-coke-on-a-tree-stump-by-the-beach",
+            "type":"rooms"
+        },   {
+            "id":2,
+            "name":"a-woman-works-at-a-desk-with-a-laptop-and-a-cup-of-coffee",
+            "type":"rooms"
+        },   {
+            "id":3,
+            "name":"a-woman-works-at-a-desk-with-a-laptop-and-a-cup-of-coffee",
+            "type":"suits"
+        },   {
+            "id":4,
+            "name":"blue-sofa-with-pillows-in-a-designer-living-room-interior",
+            "type":"suits"
+        },   {
+            "id":5,
+            "name":"brainstorming-session-with-creative-designers-2",
+            "type":"rooms"
+        },   {
+            "id":6,
+            "name":"color-palette-guide-sample-colors-catalog-",
+            "type":"suits"
+        }
+       
+    ]
+}
