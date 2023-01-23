@@ -9,7 +9,7 @@ const ViewPort = (props: any) => {
   return (
     <div className="container">
       <div
-        className="row mt-5"
+        className="row mt-5`"
         style={{ border: "1px solid black", height: "300px" }}
       >
         {props.showImgs.map((item: any) => {
