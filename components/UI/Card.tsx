@@ -11,13 +11,18 @@ const Card = (props:any) => {
         <input type="checkbox" value={props.imgUrl} className="custom-control-input" id={props.id}onChange={props.onClick} />
         <label className="custom-control-label" htmlFor={props.id}>
           {" "}
-          <div className="card" >
-            <Image src={`/photos/${props.imgUrl}.jpg`} width={288} height={288} alt="test" />
+          <div className="card" style={{width:"100px",height:"100px"}} >
+            <Image src={`/photos/${props.imgUrl}.jpg`}
+            fill={true}
+            //  sizes="(max-width: 768px) 1000vw,
+            //   (max-width: 1200px) 1000vw,
+            //   33vw" 
+              alt="test" />
             <div className="card-body">
-              <p className="card-text">
+              {/* <p className="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the cards content.
-              </p>
+              </p> */}
             </div>
           </div>
         </label>

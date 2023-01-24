@@ -27,9 +27,6 @@ const NavBar = (props:any) => {
               />
             </div>
 
-            <div className="col-6">
-              <Button onClick={props.submitHandler} />
-            </div>
           </div>
         </div>
       </div>

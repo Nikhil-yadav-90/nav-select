@@ -8,13 +8,13 @@ const ComponentModal = () => {
 const [showImgs,setShowImgs] = useState<any>([]);
 
 const imageHandler = (val:any)=>{
-  console.log("Jai Shree Ram Component Image Handler",val);
   setShowImgs(val)
 }
 
   return (
     <>
-      <div className="container-fluid">
+      <div className="container-fluid my-5">
+        
        <Overlay
        showImgs={imageHandler}
        />
