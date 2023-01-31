@@ -7,9 +7,7 @@ import Button from "../UI/Button";
 
 const Overlay = (props: any) => {
   const [displayList, setDisplayList] = useState<any>([]);
-
   const [showModal, setShowModal] = useState<any>(false);
-
   const [imgArray, setImgArray] = useState<any>([]);
 
   const displayHandler = (val: any) => {
@@ -37,12 +35,10 @@ const Overlay = (props: any) => {
 
   return (
     <div className="container mb-3" style={{ border: "1px solid black" }}>
-      <NavBar
-        onChange={displayHandler}
-      />
+      <NavBar onChange={displayHandler} />
 
       {showModal && (
-        <Modal closeHandler={setShowModal} >
+        <Modal closeHandler={setShowModal}>
           <div className="row">
             {displayList.map((elem: any) => {
               return (
@@ -54,9 +50,13 @@ const Overlay = (props: any) => {
                 />
               );
             })}
-             <div className="col-6">
-              <Button onClick={() => {props.showImgs(imgArray);
-              setShowModal(false)}} />
+            <div className="col-6" >
+              <Button
+                onClick={() => {
+                  props.showImgs(imgArray);
+                  setShowModal(false);
+                }}
+              />
             </div>
           </div>
         </Modal>
